@@ -1,5 +1,19 @@
 body {
     background-color: rgb(19, 19, 22);
+    background: radial-gradient(
+      circle at 10% 20%,
+      rgba(85, 26, 139, 0.5),
+      transparent 35%
+    ),
+    radial-gradient(circle at 70% 80%, rgba(75, 0, 130, 0.5), transparent 29%),
+    radial-gradient(circle at 30% 60%, rgba(138, 43, 226, 0.5), transparent 29%),
+    radial-gradient(circle at 90% 40%, rgba(75, 0, 130, 0.5), transparent 29%),
+    #000;
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+    
 }
 
 h1 {
@@ -8,20 +22,7 @@ h1 {
     font-weight: 500;
     font-style: normal;
     color: whitesmoke;
-    display: flex;
-    justify-content: left;
     margin-left: 15px;
-    background: radial-gradient(circle at 10% 20%,
-            rgba(85, 26, 139, 0.5),
-            transparent 35%),
-        radial-gradient(circle at 70% 80%, rgba(75, 0, 130, 0.5), transparent 29%),
-        radial-gradient(circle at 30% 60%, rgba(138, 43, 226, 0.5), transparent 29%),
-        radial-gradient(circle at 90% 40%, rgba(75, 0, 130, 0.5), transparent 29%),
-        #000;
-    height: 100%;
-    margin: 0;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
 }
 
 #nameGradient {
