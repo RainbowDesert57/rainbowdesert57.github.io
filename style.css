@@ -26,11 +26,13 @@ h1 {
 }
 
 #nameGradient {
+    white-space: nowrap;
     color: transparent;
     background: linear-gradient(to right, blueviolet, skyblue);
     /*to be customised*/
 }
 
 #programmerColor {
+    white-space: nowrap;
     color: rgb(106, 107, 112);
 }
