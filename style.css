@@ -28,11 +28,19 @@ h1 {
 #nameGradient {
     white-space: nowrap;
     color: transparent;
+    background-clip: text;
     background: linear-gradient(to right, blueviolet, skyblue);
+    animation: gradientAnimation 3s linear infinite;
+    background-size: 200%;
     /*to be customised*/
 }
 
 #programmerColor {
     white-space: nowrap;
     color: rgb(106, 107, 112);
+}
+@keyframes animateGradient {
+    to {
+      background-position: 200%;
+    }
 }
