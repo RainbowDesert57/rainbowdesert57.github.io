@@ -1,3 +1,10 @@
+:root {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color: white;
+}
 body {
     background-color: rgb(19, 19, 22);
     background: radial-gradient(
@@ -21,23 +28,30 @@ h1 {
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
+    font-size: 50px;
     color: whitesmoke;
-    margin-left: 15px;
 }
-
-#nameGradient {
-    display: inline;
+.introText {
+  position: relative;
+  left: 10%;
+  top: 50%;
+}
+.nameGradient {
+  display: inline;
+    background: linear-gradient(to right, blueviolet, blue, blueviolet);
     background-clip: text;
-    color: transparent;
     -webkit-background-clip: text;
-    background: linear-gradient(to right, blueviolet, skyblue, skyblue, blueviolet);
-    animation: gradientAnimation 3s linear infinite;
+    color: transparent;
     background-size: 200%;
+    animation: gradientAnimation 3s linear infinite;
     /*to be customised*/
 }
 #programmerColor {
     display: inline;
     color: rgb(106, 107, 112);
+}
+.introBottom {
+  color: white;
 }
 @keyframes gradientAnimation {
     to {
