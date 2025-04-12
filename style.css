@@ -11,43 +11,77 @@ body {
   margin: 0;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  
 }
 
 h1 {
-    font-family: "Outfit", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 50px;
-    color: whitesmoke;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 50px;
+  color: whitesmoke;
 }
 .page1 {
-  padding: 10px;
+  background-color: rgb(17, 17, 17);
+  border-radius: 20px;
+  height: 100%;
+  width: 50%;
   text-align: center;
   position: relative;
-  right: 20%;
+  left: 7%;
   top: 150px;
+}
+.page1::after , .page1::before {
+  display: inline;
+  content: '';
+  position: absolute;
+  height: 101%;
+  width: 101%;
+  background: conic-gradient( from var(--backgroundAngle), red, yellow, rgb(0, 255, 0), cyan, blue, magenta, red);
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  border-radius: 20px;
+  animation: spin 3s linear infinite;
+}
+.page1::before {
+  filter: blur(0.75rem);
 }
 .nameGradient {
   display: inline;
-    background: linear-gradient(to right, blueviolet, blue, blueviolet);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    background-size: 200%;
-    animation: gradientAnimation 3s linear infinite;
-    /*to be customised*/
+  background: linear-gradient(to right, blueviolet, rgb(0, 225, 255), blueviolet);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-size: 200%;
+  animation: gradientAnimation 1.5s linear infinite;
+  /*to be customised*/
 }
 #programmerColor {
-    display: inline;
-    color: rgb(106, 107, 112);
+  display: inline;
+  color: rgb(106, 107, 112);
 }
 .introBottom {
   color: white;
+  position: relative;
+  right: 15%;
 }
 @keyframes gradientAnimation {
-    to {
-      background-position: 200%;
-    }
+  to {
+    background-position: 200%;
   }
+}
+@keyframes spin {
+  from {
+    --backgroundAngle: 0deg;
+  }
+  to {
+    --backgroundAngle: 360deg;
+  }
+}
+@property --backgroundAngle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
