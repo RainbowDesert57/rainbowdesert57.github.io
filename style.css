@@ -21,7 +21,7 @@ h1 {
   font-size: 50px;
   color: whitesmoke;
 }
-.page1 {
+.textPage1 {
   background-color: rgb(17, 17, 17);
   border-radius: 20px;
   height: 100%;
@@ -29,23 +29,25 @@ h1 {
   text-align: center;
   position: relative;
   left: 7%;
-  top: 150px;
+  top: 120px;
+  padding-bottom: 10px;
 }
-.page1::after , .page1::before {
+.textPage1::after, .textPage1::before {
   display: inline;
   content: '';
   position: absolute;
-  height: 101%;
-  width: 101%;
+  height: 100%;
+  width: 100%;
   background: conic-gradient( from var(--backgroundAngle), red, yellow, rgb(0, 255, 0), cyan, blue, magenta, red);
   top: 50%;
   left: 50%;
   translate: -50% -50%;
   z-index: -1;
-  border-radius: 20px;
+  border-radius: 23px;
   animation: spin 3s linear infinite;
+  padding: 3px;
 }
-.page1::before {
+.textPage1::before {
   filter: blur(0.75rem);
 }
 .nameGradient {
@@ -67,6 +69,52 @@ h1 {
   position: relative;
   right: 15%;
 }
+/* language boxes */
+.languages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  position: relative;
+  height: auto;
+  max-width: 550px;
+  bottom: 100px;
+  margin-left: auto;
+  right: 2%;
+}
+.cpp, .javascript, .css, .html {
+  all: unset;
+  font-size: 23px;
+  padding-right: 30px;
+  padding-left: 30px;
+  border: none;
+  border: 1.5px solid rgb(128, 128, 128);
+  
+}
+.langLogo {
+  position: relative;
+  top: 13px;
+  height: 45px;
+  padding: 5px;
+  border: 1px solid rgb(68, 68, 68);
+}
+#htmlFix {
+  position: relative;
+  top: 10px;
+}
+button {
+  background-color: rgb(17, 17, 17);
+  padding-right: 15px;
+  padding-left: 15px;
+}
+p {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color: white;
+  font-size: 25px;
+}
+/* Animations */
 @keyframes gradientAnimation {
   to {
     background-position: 200%;
