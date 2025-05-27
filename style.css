@@ -21,6 +21,9 @@ h1 {
   font-size: 50px;
   color: whitesmoke;
 }
+a {
+  text-decoration: none;
+}
 .textPage1 {
   background-color: rgb(17, 17, 17);
   border-radius: 20px;
@@ -38,7 +41,7 @@ h1 {
   position: absolute;
   height: 100%;
   width: 100%;
-  background: conic-gradient( from var(--backgroundAngle), red, yellow, rgb(0, 255, 0), cyan, blue, magenta, red);
+  background: conic-gradient( from var(--backgroundAngle), black, cyan, black,  black, black, cyan, black, black, black);
   top: 50%;
   left: 50%;
   translate: -50% -50%;
@@ -46,6 +49,8 @@ h1 {
   border-radius: 23px;
   animation: spin 3s linear infinite;
   padding: 3px;
+  background-color: black;
+  overflow: hidden;
 }
 .textPage1::before {
   filter: blur(0.75rem);
@@ -80,22 +85,26 @@ h1 {
   bottom: 100px;
   margin-left: auto;
   right: 2%;
+  animation: slideIn 0.6s linear;
 }
 .cpp, .javascript, .css, .html {
   all: unset;
   font-size: 23px;
-  padding-right: 30px;
-  padding-left: 30px;
+  padding-right: 50px;
+  padding-left: 50px;
+  border-style: none;
   border: none;
-  border: 1.5px solid rgb(128, 128, 128);
-  
+  background-color: black;
+  border-radius: 15px;
+  margin: 10px;
+  box-shadow: 8px 10px 6px rgba(0, 0, 0, 0.397);
 }
 .langLogo {
   position: relative;
   top: 13px;
   height: 45px;
   padding: 5px;
-  border: 1px solid rgb(68, 68, 68);
+  border: none  ;
 }
 #htmlFix {
   position: relative;
@@ -128,6 +137,24 @@ p {
     --backgroundAngle: 360deg;
   }
 }
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  5% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.25;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    
+  }
+}
+
 @property --backgroundAngle {
   syntax: "<angle>";
   initial-value: 0deg;
