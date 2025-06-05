@@ -1,37 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div class="page1">
-      <div class="textPage1">
-      <div class="introText">
-        <h1>
-          Hi, my name is
-          <div class="nameGradient">Tanish Jangra</div>
-          <br />
-          I am a
-          <div id="programmerColor">programmer</div>
-        </h1>
-      </div>
-      <div class="introBottom"><img src="\location.png" alt="location icon"> Chandigarh, India</div>
-    </div>
-      <div class="languages">
-        <div class="cpp"><a href="projects/C++/index.html"><p><img src="\cpp.png" alt="c++" class="langLogo">C++</p></a></div>
-        <div class="javascript"><a href="projects/web/index.html"><p><img src="\js.png" alt="JavaScript" class="langLogo">JavaScript</p></a></div>
-        <div class="html"><a href="projects/web/index.html"><p><img src="\html.png" alt="HTML" class="langLogo" id="htmlFix">HTML</p></a></div>
-        <div class="css"><a href="projects/web/index.html"><p><img src="\css.png" alt="" class="langLogo">CSS</p></a></div>
+<head>
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Varela+Round&display=swap" rel="stylesheet">
+  <!-- css -->
+   <link rel="stylesheet" href="style.css">
+  <!-- head -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Porfolio - Tanish Jangra</title>
+</head>
+<body>
+  <!-- Purple themed portfolio -->
+   
+  <div id="page1">
+    <div id="introContainer">
+      <div>
+        <h1 id="name">HI, MY NAME IS TANISH JANGRA</h1>
+        <p id="description">I am a 14 year old programmer studying in 10th grade in Chandigarh, India</p>
       </div>
     </div>
-  </body>
+    <div id="buttonContainer">
+      <h2 id="buttonText">Languages: </h2>
+      <button id="cppButton" class="languageButton">C++</button>
+      <button id="jsButton" class="languageButton">JS</button>
+      <button id="cssButton" class="languageButton">CSS</button>
+      <button id="htmlButton" class="languageButton">HTML</button>
+      <button id="electronButton" class="languageButton">Electron</button>
+    </div>
+  </div>
+</body>
 </html>
