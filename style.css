@@ -16,6 +16,7 @@ body {
   width: 100%;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   width: 100%;
 }
 /* Button */
@@ -41,6 +42,7 @@ body {
   margin: 5px;
   transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
   color: rgb(240, 240, 240);
+  animation: appear 0.5s ease-in-out;
 }
 .languageButton:hover {
   box-shadow: 0px 0px 5px 5px rgba(149, 45, 214, 0.37);
@@ -48,13 +50,14 @@ body {
   cursor: pointer;
 }
 .languageButton:active {
-  transform: scale(1.02) translateY(-15%);
+  transform: scale(1.03) translateY(-10%);
 }
 #buttonText {
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 600;
   text-align: center;
   color: rgb(240, 240, 240);
+  animation: appear 0.5s ease-in-out;
 }
 #introContainer {
   border-radius: 10px;
@@ -102,8 +105,119 @@ body {
   /* filter: blur(7px);
   opacity: 0.5; */
 }
-/* custom property for --borderAngle */
-/* border animation */
+#introContainer::before {
+  filter: blur(15px);
+  opacity: 1;
+}
+#name {
+  width: 100%;
+  animation: appear 0.5s ease-in-out;
+}
+.description {
+  animation: appear 0.5s ease-in-out;
+}
+/* blinking cursor */
+#nameTypewriter {
+  animation: typeWriter 1s steps(14) forwards;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+}
+#nameTypewriter2 {
+  animation: typeWriter 1s steps(13) forwards 1s;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+}
+#keepCursor {
+  white-space: nowrap;
+  display: inline-block;
+}
+#nameHideCursor1 {
+  animation: hide 1s steps(1) forwards;
+  opacity: 0;
+}
+#nameHideCursor2 {
+  animation: hide 1s steps(1) forwards 1s;
+  opacity: 0;
+}
+#cursorBlinkDelayed {
+  animation: hide 2s steps(1) forwards 5.5s, blink 1s steps(1) infinite forwards 7.5s;
+  opacity: 0;
+}
+#descTypewriter1 {
+  animation: typeWriter 2s steps(41) forwards 2s;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+}
+#descTypewriter2 {
+  animation: typeWriter 1.5s steps(31) forwards 4s;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+}
+#descTypewriter3 {
+  animation: typeWriter 2s steps(23) forwards 5.5s;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+}
+#descSmall {
+  font-size: 14px;
+}
+#hideCursorDelayed {
+  animation: hide 1s steps(1) forwards 1s;
+  opacity: 0;
+}
+#hideCursorDelayedDesc1 {
+  animation: hide 2s steps(1) forwards 2s;
+  opacity: 0;
+}
+#hideCursorDelayedDesc2 {
+  animation: hide 1.5s steps(1) forwards 4s;
+  opacity: 0;
+}
+/* using hide animation: after how many second to hide -> duration, after how many seconds to show -> delay */
+/* using show animation: after how many seconds to show -> duration, delay is useless, it does the same stuff as duration */
+/* TIP: use delay for typewriter animation same as the delay for animation: hide */
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+  opacity: 1;
+  }
+}
+@keyframes typeWriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes hide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
 @keyframes borderAnimation {
   0% {
     --borderAngle: 0deg;
@@ -112,11 +226,29 @@ body {
     --borderAngle: 360deg;
   }
 }
-#introContainer::before {
-  filter: blur(15px);
-  opacity: 1;
-}
-#name {
-  width: 70%;
-  margin-left: 15%;
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+    scale: 0.95;
+    filter: blur(5px);
+  }
+  60% {
+    transform: translateY(-10px);
+    opacity: 1;
+    filter: blur(0px);
+    scale: 1.01;
+  }
+  65% {
+    transform: translateY(-10px);
+    opacity: 1;
+    filter: blur(0px);
+    scale: 1.01;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    scale: 1;
+    filter: blur(0);
+  }
 }
