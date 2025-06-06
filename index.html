@@ -20,7 +20,9 @@
       <div>
         <h1 id="name"><span id="keepCursor"><span id="nameTypewriter">HI, MY NAME IS</span><span id="nameHideCursor1">_</span></span><br><span id="keepCursor"><span id="nameTypewriter2">TANISH JANGRA</span><span id="nameHideCursor2">_</span></span></h1>
         <p class="description"><span id="keepCursor"><span id="descTypewriter1">I am a 14 year old programmer studying in</span><span id="hideCursorDelayedDesc1">_</span></span><br><span id="keepCursor"><span id="descTypewriter2">10th grade in Chandigarh, India</span><span id="hideCursorDelayedDesc2">_</span></span></p>
+        <br>
         <p class="description" id="descSmall"><span id="keepCursor"><span id="descTypewriter3">I started programming in late 2023 with C++</span><span id="cursorBlinkDelayed">_</span></span></p>
+        <br>
       </div>
     </div>
     <div id="buttonContainer">
@@ -31,7 +33,57 @@
       <button id="htmlButton" class="languageButton">HTML</button>
       <button id="electronButton" class="languageButton">Electron</button>
     </div>
-    <div id="dock"></div>
   </div>
+    <div id="dock">
+      <button id="githubDock" class="dockItem"><img src="dockIcons/github.svg" alt="github" class="dockIcon" id="githubIcon"></button>
+      <button id="discordDock" class="dockItem"><img src="dockIcons/discord.svg" alt="" class="dockIcon" id="discordIcon"></button>
+      <button id="emailDock" class="dockItem"><img src="dockIcons/email24.svg" alt="" class="dockIcon"></button>
+      <button id="myJourneyDock" class="dockItem"><img src="dockIcons/clock.svg" alt="" class="dockIcon" id="myJourneyIcon"></button>
+  </div>
+  <div id="page2">
+    <h1 id="page2Heading">Projects</h1>
+    <div id="cardContainer">
+      <div id="card1" class="card" data-tilt data-tilt-glare data-tilt-max-glare="0.3">
+        <h3 id="card1Title" class="cardTitle">Minimalistic Reader</h3>
+        <img src="cardBanner/readerBanner.png" alt="banner" id="card1Image" class="cardImage">
+        <div id="card1TechContainer" class="cardTechContainer">
+        <button id="techButton1-1" class="techButton">Electron</button>
+        <button id="techButton2-1" class="techButton">JavaScript</button>
+        <button id="techButton3-1" class="techButton">CSS</button>
+        <button id="techButton4-1" class="techButton">HTML</button>
+        </div>
+        <p id="card1Text" class="cardText">no ads, scroll animation and background is your wallpaper</p>
+      </div>
+      <div id="card2" class="card" data-tilt data-tilt-glare data-tilt-max-glare="0.3">
+        <img src="" alt="" id="card2Image" class="cardImage">
+        <p id="card1Text" class="cardText">this is so cool</p>
+        <div id="card1TechContainer" class="cardTechContainer">
+        <button id="techButton1-2" class="techButton">Electron</button>
+        <button id="techButton2-2" class="techButton">JavaScript</button>
+        <button id="techButton3-2" class="techButton">CSS</button>
+        <button id="techButton4-2" class="techButton">HTML</button>
+        </div>
+      </div>
+      <div id="card3" class="card" data-tilt data-tilt-glare data-tilt-max-glare="0.3">
+        <img src="" alt="" id="card3Image" class="cardImage">
+        <p id="card1Text" class="cardText">this is so cool</p>
+        <div id="card1TechContainer" class="cardTechContainer">
+        <button id="techButton1-3" class="techButton">Electron</button>
+        <button id="techButton2-3" class="techButton">JavaScript</button>
+        <button id="techButton3-3" class="techButton">CSS</button>
+        <button id="techButton4-3" class="techButton">HTML</button>
+        </div>
+      </div>
+      <div id="card4" class="card" data-tilt data-tilt-glare data-tilt-max-glare="0.3">
+        <img src="" alt="" id="card1Image" class="cardImage">
+        <p id="card1Text" class="cardText">this is so cool</p>
+        <div id="card1TechContainer" class="cardTechContainer">
+        <button id="techButton1-4" class="techButton">C++</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <script src="vanilla-tilt.js"></script>
 </body>
 </html>
