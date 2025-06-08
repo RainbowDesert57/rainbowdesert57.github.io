@@ -58,18 +58,18 @@ githubDock.addEventListener('click', e => {
   console.log("redirecting to github...")
 });
 discordDock.addEventListener('click', e => {
-  window.location.href = '/pages/contacts.html';
+  window.open('/pages/contacts.html', '_blank');
   console.log("redirecting to github...")
 });
 emailDock.addEventListener('click', e => {
-  window.location.href = '/pages/contacts.html';
+  window.open('/pages/contacts.html', '_blank');
   console.log("redirecting to github...")
 });
 myJourneyDock.addEventListener('click', e => {
-  window.location.href = '/pages/contacts.html';
+  window.open('/pages/contacts.html', '_blank');
   console.log("redirecting to github...")
 });
 githubDock.addEventListener('click', e => {
-  window.location.href = 'https://github.com/rainbowdesert57';
+  window.open('/pages/contacts.html', '_blank');
   console.log("redirecting to github...")
 });
