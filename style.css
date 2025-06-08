@@ -297,7 +297,7 @@ body {
 .cardText {
   transform: translateZ(20px);
   font-size: 17px;
-  text-shadow: 0px 0px 2px white;
+  text-shadow: 0px 0px 3px white;
   color: white;
 }
 .cardTechContainer {
@@ -333,7 +333,7 @@ body {
   transform: translateZ(20px);
   /* font-size: 12px; */
   color: white;
-  text-shadow: 0px 0px 3px white;
+  text-shadow: 0px 0px 5px white;
   font-size: 30px;
 }
 /* 3d slider */
