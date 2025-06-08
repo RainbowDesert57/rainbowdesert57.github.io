@@ -298,6 +298,7 @@ body {
   transform: translateZ(20px);
   font-size: 17px;
   text-shadow: 0px 0px 2px white;
+  color: white;
 }
 .cardTechContainer {
   display: grid;
@@ -331,6 +332,7 @@ body {
 .cardTitle {
   transform: translateZ(20px);
   /* font-size: 12px; */
+  color: white;
   text-shadow: 0px 0px 3px white;
   font-size: 30px;
 }
