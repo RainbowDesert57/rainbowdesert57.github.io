@@ -26,27 +26,40 @@ document.addEventListener("DOMContentLoaded", () => {
   observer.observe(page2Heading);
   // NOTE: This removes the tilt effect when not in use
   // TODO: add data-tilt to subclasses
-  // const cards = document.querySelectorAll(".card");
+    const page3 = document.getElementById('page3');
+  const page3Observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            page3.classList.add("visible");
+            page3.classList.remove("hidden");
+        } else {
+            page3.classList.add("hidden");
+            page3.classList.remove("visible");
+        }
+      });
+    },
+    { threshold: 0.5 } // Adjust as needed
+  );
+  page3Observer.observe(page3);
+const card = document.querySelector('#cardContainer');
 
-  // const cardObserver = new IntersectionObserver(
-  //   (entries) => {
-  //     entries.forEach(entry => {
-  //       if (entry.isIntersecting) {
-  //         entry.target.classList.add("visible");
-  //         entry.target.classList.remove("hidden");
-  //       } else {
-  //         // Optional: remove class if you want animation on scroll back
-  //         entry.target.classList.add("hidden");
-  //         entry.target.classList.remove("visible");
-  //       }
-  //     });
-  //   }, 
-  //   {
-  //     threshold: 0.1 // Adjust this to control how much of element must be visible
-  //   }
-  // );
+const cardObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      card.classList.add('visible');
+      card.classList.remove('hidden');
+    } else {
+      card.classList.add('hidden');
+      card.classList.remove('visible');
+    }
+  });
+}, {
+  threshold: 0.3
+ // Adjust this if you want it to trigger earlier/later
+});
 
-  // cards.forEach(cards => cardObserver.observe(cards));
+cardObserver.observe(card);
 });
 const githubDock = document.getElementById('githubDock');
 const discordDock = document.getElementById('discordDock');

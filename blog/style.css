@@ -1,0 +1,28 @@
+body{
+  background-color: rgb(36, 39, 58);
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  margin-top: 100px;
+  margin-bottom: 100px
+}
+.line {
+  opacity: 0.03;
+  transform: scale(0.75);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  color: rgb(202, 211, 245);
+  margin-left: 15%;
+  font-size: 50px;
+  width: 70vw;
+}
+.line.visible {
+  margin-bottom: 20px;
+  opacity: 1;
+  transform: scale(1);
+}
+.underline {
+  color: rgb(198, 160, 246);
+  text-decoration: underline;
+  text-decoration-color: rgb(198, 160, 246);
+}

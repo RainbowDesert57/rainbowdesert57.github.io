@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.4/dist/lenis.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Minimalistic Reader</title>
+  </head>
+  <body>
+    <!-- <div id="mainText"> -->
+      <div class="line" id="start">Project: minimalistReader<br>learned how to make scroll animations like the one you are seeing</div>
+      <div class="line">Current project: Portfolio rebuild from scratch (branch of the current portfolio</div>
+      <div class="line">Current:</div>
+      <div class="line">Class: 10th</div>
+      <div class="line">Age: 12</div>
+      <div class="line">I started programming in the end of 2023 with C++</div>
+      <div class="line">But then Had to take a big break because of exams and lost track of programming</div>
+      <div class="line">I started again in <span class="underline">November, 2024</span></div>
+      <div class="line" id="end">TODO: finish writing ts</div>
+      <div class="line">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, vitae laborum consequuntur error recusandae tempora reprehenderit optio quo rem quia aspernatur eligendi nihil quae obcaecati, nemo temporibus iste in facere?</div>
+      <div class="line">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, dolorem beatae voluptatem tenetur quod eligendi aut minus odio animi adipisci!</div>
+      <div class="line">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, nisi!</div>
+      <div class="line"></div>
+    <!-- </div> -->
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@0.2.28/bundled/lenis.js"></script>
+  <script>
+    const lenis = new Lenis({
+  duration: 2, // Scroll duration
+  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Easing function for smooth transitions
+  direction: 'vertical', // Scroll direction: vertical or horizontal
+  gestureDirection: 'vertical', // Gesture direction: vertical, horizontal, or both
+  smooth: true, // Enable smooth scrolling
+  mouseMultiplier: 1, // Mouse scroll speed multiplier
+  smoothTouch: false, // Disable smooth scrolling for touch devices
+  touchMultiplier: 2, // Touch scroll speed multiplier
+  infinite: false, // Disable infinite scroll
+});
+
+// Optional: Listen to scroll events
+lenis.on('scroll', ({ scroll, limit, velocity, direction, progress }) => {
+  console.log({ scroll, limit, velocity, direction, progress });
+});
+
+// Animation frame loop function
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
+  </script>
+  </body>
+</html>
