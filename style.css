@@ -508,6 +508,14 @@ body {
             translateZ(180px);
     }
 }
+#page4 {
+  text-align: center;
+}
+.mainGlowHeading {
+  font-size: 45px;
+  color: rgb(202, 211, 245);
+  text-shadow: 0px 1px 0px 3px rgb(212, 221, 255);
+}
 /* using hide animation: after how many second to hide -> duration, after how many seconds to show -> delay */
 /* using show animation: after how many seconds to show -> duration, delay is useless, it does the same stuff as duration */
 /* TIP: use delay for typewriter animation same as the delay for animation: hide; */
