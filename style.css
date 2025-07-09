@@ -50,7 +50,7 @@ body {
   margin: 5px;
   transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
   color: rgb(240, 240, 240);
-  animation: appear 0.5s ease-in-out;
+  /* animation: appear 0.5s ease-in-out; */
 }
 .languageButton:hover {
   box-shadow: 0px 0px 5px 5px rgba(149, 45, 214, 0.37);
@@ -60,13 +60,40 @@ body {
 .languageButton:active {
   transform: scale(1.03) translateY(-10%);
 }
+#cppButton {
+  animation: appear 0.5s ease-in-out forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+#jsButton {
+  animation: appear 0.5s ease-in-out forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+#cssButton {
+  animation: appear 0.5s ease-in-out forwards;
+  animation-delay: 0.7s;
+  opacity: 0;
+}
+#htmlButton {
+  animation: appear 0.5s ease-in-out forwards;
+  animation-delay: 0.7s;
+  opacity: 0;
+}
+#electronButton {
+  animation: appear 0.7s ease-in-out forwards;
+  animation-delay: 0.9s;
+  opacity: 0;
+}
 #buttonText {
   font-size: 30px;
   font-weight: 600;
   text-align: center;
   color: rgb(240, 240, 240);
-  animation: appear 0.5s ease-in-out;
+  animation: appear 0.5s ease-in-out forwards;
+  animation-delay: 0.3s;
   margin-top: 7px;
+  opacity: 0;
 }
 #introContainer {
   border-radius: 10px;
