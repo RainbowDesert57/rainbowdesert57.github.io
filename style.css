@@ -404,6 +404,7 @@ body {
   animation: autoRun 20s linear infinite;
   z-index: 2;
   border-radius: 10px;
+  -moz-osx-font-smoothing: grayscaled;
 }
 .banner .slider:hover {
   animation-play-state: paused;
