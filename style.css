@@ -422,6 +422,7 @@ body {
     text-rendering: optimizeLegibility;
     backface-visibility: visible;
     -webkit-backface-visibility: visible;
+    -moz-osx-font-smoothing: grayscaled;
 }
 .banner .slider .item .projectDisplay{
     color: rgb(198, 208, 245);
