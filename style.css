@@ -31,6 +31,7 @@ body {
   /* background-color: rgb(12, 12, 12); */
   background: transparent;
   margin: 0;
+  border-radius: 7px;
 }
 #pageBg {
   background-image: url(./MistyTrees.jpg);
@@ -41,6 +42,7 @@ body {
   height: 100vh;
   background-size: cover;
   z-index: -99999;
+  border-radius: 7px;
 }
 #pageBg::before {
 /* This pseudo-element creates the tint overlay */
@@ -56,6 +58,7 @@ z-index: -99998;
 /* backdrop-filter: blur(24px) saturate(130%); */
 /* background-color: rgba(0, 0, 0, 0.3); */
 backdrop-filter: blur(45px);
+border-radius: 5px;
 }
 /* page1 */
 #page1 {
