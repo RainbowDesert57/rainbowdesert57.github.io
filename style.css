@@ -447,6 +447,7 @@ backdrop-filter: blur(45px);
   color: white;
   font-size: 70px;
   z-index: -10;
+  padding-top: 50px;
 }
 .banner {
   top: 100px;
