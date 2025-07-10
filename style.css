@@ -623,7 +623,7 @@ border-radius: 5px;
 	position: relative;
 	padding: 1rem 2rem;
 }
-.techStackButtonutton::before {
+.techStackButton::before {
 	content: "";
 	position: absolute;
 	inset: 0;
