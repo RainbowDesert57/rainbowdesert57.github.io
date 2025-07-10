@@ -1,4 +1,4 @@
 <div align=center>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=30&letterSpacing=tiny&duration=2000&pause=3000&color=F7F7F7&center=true&vCenter=true&width=435&lines=Tanish's+Porfolio)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=900&size=45&pause=10&color=FFFFFF&center=true&width=435&lines=Tanish's+Portfolio;Tech+Portfolio;Programmin+Portfolio)](https://git.io/typing-svg)
 </div>
