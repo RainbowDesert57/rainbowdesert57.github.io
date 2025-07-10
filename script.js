@@ -24,8 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
     { threshold: 0.9 } // Adjust as needed
   );
   observer.observe(page2Heading);
-  // NOTE: This removes the tilt effect when not in use
-  // TODO: add data-tilt to subclasses
+//  NOTE: This removes the tilt effect when not in use
+//  TODO: add data-tilt to subclasses
     const page3 = document.getElementById('page3');
   const page3Observer = new IntersectionObserver(
     (entries) => {
