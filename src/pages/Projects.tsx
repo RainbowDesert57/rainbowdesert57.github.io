@@ -1,10 +1,29 @@
 import React from 'react';
 import { TilingWM } from '@/components/Tilingwm/Tilingwm';
 import './Projects.css'
+import FaultyTerminal from '@/components/FaultyTerminal';
 
 const Projects: React.FC = () => {
   return (
     <>
+      <div style={{ width: '100vw', height: '100svh', position: 'fixed', zIndex: 0 }}>
+        <FaultyTerminal
+          scale={1.5}
+          digitSize={1.2}
+          scanlineIntensity={0.5}
+          glitchAmount={1}
+          flickerAmount={1}
+          noiseAmp={1}
+          chromaticAberration={0}
+          dither={0}
+          curvature={0.1}
+          tint="#545454"
+          mouseReact
+          mouseStrength={0.5}
+          brightness={0.6}
+        />
+      </div>
+
       <div className='terminal-container' style={{ display: 'flex', flexDirection: 'column', height: '100svh', width: '100vw' }}>
         <TilingWM />
           {/*

@@ -1,9 +1,9 @@
 .tiling-wm {
   /* Ill use same vars but in another stylesheet and pray nothing blows up --Crucible */
-  --bg: #0a0a0b;
-  --pane-bg: #0d0d0e;
+  --bg: #0a0a0b00;
+  --pane-bg: #0d0d0eaa;
   --border: #28282b;
-  --border-focus: #e4e4e7;
+  --border-focus: #e4e4e755;
   --divider-hover: #3a3a3e;
   --text: #c7c7cb;
   --text-dim: #5a5a60;
@@ -95,6 +95,7 @@
   min-width: 0;
   min-height: 0;
   background: var(--pane-bg);
+  backdrop-filter: blur(12px);
   border: 1px solid var(--border);
   border-radius: 0;
 }

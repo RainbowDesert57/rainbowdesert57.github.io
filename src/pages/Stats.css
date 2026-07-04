@@ -1,0 +1,46 @@
+main {
+  --green: #4affa1; --blue: #1fbcff; --purple: #695cff; --cyan: #24f4ff;
+  gap: 5px;
+}
+.pulse {
+  width:12px;
+  height:12px;
+  border-radius:50%;
+  background: var(--green);
+  box-shadow:0 0 8px var(--green);
+  flex:none;
+  animation: pulse 2s ease infinite;
+}
+
+@keyframes pulse{ 0%,100%{opacity:1;} 50%{opacity:0.35;} }
+
+.status {
+  font-size: 1.4rem; font-weight: bold;
+}
+
+.cursor-blink {
+  width: 8px;
+  height: 1.2rem;
+  background-color: white;
+  animation: cursor 1.2s linear infinite;
+  animation-timing-function: steps(1);
+}
+
+@keyframes cursor {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.language-box {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tsx { --barColor: var(--blue); }
+.css { --barColor: var(--purple); }
+.cpp { --barColor: var(--cyan); }

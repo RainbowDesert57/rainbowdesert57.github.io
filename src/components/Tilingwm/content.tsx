@@ -34,7 +34,7 @@ export const NEOFETCH_ROWS: { label: string; value: string }[] = [
   { label: "OS", value: "CrucibleOS x86_64" },
   { label: "Host", value: "tanishworks.github.io" },
   { label: "Kernel", value: "6.6.0-tanish" },
-  { label: "Uptime", value: "since the day I opened gh-pages idk bro" },
+  { label: "Uptime", value: "idk bro" },
   { label: "Shell", value: "CSH 5.9" },
   { label: "WM", value: "CrucibleWM (this one)" },
   { label: "CPU", value: "Imagine one or smth" },

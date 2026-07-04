@@ -24,9 +24,9 @@ const noopOpenProject = () => {};
 
 function makeInitialWindows(): WindowMap {
   return {
-    w1: runCommand(createWindow(), "neofetch", noopOpenProject),
-    w2: createWindow({ cmatrixRunning: true }),
-    w3: createWindow(),
+    w1: runCommand(createWindow(), "clear && neofetch", noopOpenProject),
+    w2: runCommand(createWindow(), "ls", noopOpenProject),
+    w3: runCommand(createWindow(), "help", noopOpenProject),
   };
 }
 
