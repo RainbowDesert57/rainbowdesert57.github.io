@@ -1,4 +1,5 @@
-import './TuiBar.css'
+import "./TuiBar.css";
+
 function TuiBar({
   progress,
   total,
@@ -7,18 +8,13 @@ function TuiBar({
   total: number;
 }) {
   const width = 24;
-  const filled = Math.round((progress / total) * width);
+  const filled = Math.floor((progress / total) * width);
 
   return (
-<span className="jetbrains-mono" style={{fontSize: '1.2rem', display: 'flex', alignItems: 'center'}}>
-  [
-  <span className="bar" style={{fontSize: '1rem'}}>
-      {"|".repeat(filled)}
-  </span>
-      {"\u00A0".repeat(width - filled)}
-  ]
-</span>
-
+    <span className="jetbrains-mono tui-bar">
+      <span className="filled">{"⣿".repeat(filled)}</span>
+      <span className="empty">{"⣀".repeat(width - filled)}</span>
+    </span>
   );
 }
 

@@ -1,3 +1,13 @@
-.bar {
-  color: var(--barColor)
+.tui-bar {
+  font-size: 1rem;
+  white-space: pre;
+}
+
+.filled {
+  color: var(--barColor);
+}
+
+.empty {
+  color: color-mix(in srgb, var(--barColor) 30%, transparent);
+  /* or just use a gray like #555 if you prefer */
 }

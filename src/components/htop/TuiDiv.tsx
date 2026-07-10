@@ -8,7 +8,7 @@ export default function TuiWindow({
   children,
 }: TuiWindowProps) {
   return (
-    <div className="jetbrains-mono" style={{border: '#555 solid 2px', display: 'flex', flexDirection: 'column', padding: '0px 20px', zIndex: '1'}}>
+    <div className="jetbrains-mono" style={{border: '#555 solid 2px', display: 'flex', flexDirection: 'column', padding: '0px 20px', zIndex: '1', width: '100%', height: '100%'}}>
       <div style={{transform: 'translateY(-60%) translateX(-15px)', background: 'black', padding: '0px 0px', width: 'fit-content'}}>
         -| {heading} |-
       </div>

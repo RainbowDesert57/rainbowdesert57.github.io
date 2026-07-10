@@ -180,8 +180,8 @@ export function HelpOutput() {
     ["\u2191 / \u2193", "cycle through command history"],
     ["pwd", "print working directory"],
     ["clear", "clear this pane"],
-    ["open", "open a new pane   (alt+enter also works)"],
-    ["exit", "close this pane   (alt+q also works)"],
+    ["open", "open a new pane   (alt+q also works)"],
+    ["exit", "close this pane   (alt+c also works)"],
   ];
   return (
     <div>

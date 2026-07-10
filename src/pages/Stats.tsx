@@ -25,36 +25,55 @@ const Projects: React.FC = () => {
         />
       </div>
 
-    <main style={{marginTop: '80px', minHeight: '870px', display: 'flex'}}>
-
-      <TuiWindow heading='Status'>
-        <div style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
-          <div className='pulse'></div><span className='status'>Online</span>
-        </div>
-        <div style={{display: 'flex', alignItems: 'center', gap: '8px'}}>
-          <span> Editting ThreadVault </span><div className='cursor-blink'></div>
-        </div>
-      </TuiWindow>
-
-      <TuiWindow heading='Languages'>
-      <div className='language-box'>
-        <div className='tsx' style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
-          TSX
-          <TuiBar progress={40} total={100}/>
-        </div>
-        <div className='css' style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
-          CSS
-          <TuiBar progress={40} total={100}/>
-        </div>
-        <div className='cpp' style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
-          C++
-          <TuiBar progress={40} total={100}/>
-        </div>
+<main className="dashboard">
+  <div className="status-card">
+    <TuiWindow heading="Status">
+      <div className='status-head'>
+        <span className='online-indicator'>•</span>
+        <span className='status-text'>Online</span>
+        {
+          /*
+            * get status from hackatiem
+          */
+        }
       </div>
-      </TuiWindow>
+      <div className='current-project-container'>
+        <span className='current-project-text'>currently working on</span>
+        <span className='current-project'>LockIn</span>
+      </div>
+    </TuiWindow>
+  </div>
 
+  <div className="projects-card">
+    <TuiWindow heading="Projects">
+      ...
+    </TuiWindow>
+  </div>
 
-    </main>
+  <div className="music-card">
+    <TuiWindow heading="Music">
+      ...
+    </TuiWindow>
+  </div>
+
+  <div className="coding-card">
+    <TuiWindow heading="Coding Activity">
+      ...
+    </TuiWindow>
+  </div>
+
+  <div className="discord-card">
+    <TuiWindow heading="Discord">
+      ...
+    </TuiWindow>
+  </div>
+
+  <div className="github-card">
+    <TuiWindow heading="GitHub">
+      ...
+    </TuiWindow>
+  </div>
+</main>
     </>
   );
 };
