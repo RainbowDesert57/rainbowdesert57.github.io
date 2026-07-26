@@ -29,13 +29,15 @@ const Projects: React.FC = () => {
   <div className="status-card">
     <TuiWindow heading="Status">
       <div className='status-head'>
-        <span className='online-indicator'>•</span>
-        <span className='status-text'>Online</span>
+      <h4>
+        <span className='online-indicator bitcount'>•</span>
+        <span className='status-text bitcount'>Online</span>
         {
           /*
-            * get status from hackatiem
+            * get status from hackatime
           */
         }
+      </h4>
       </div>
       <div className='current-project-container'>
         <span className='current-project-text'>currently working on</span>
@@ -46,7 +48,14 @@ const Projects: React.FC = () => {
 
   <div className="projects-card">
     <TuiWindow heading="Projects">
-      ...
+      <h4 className='bitcount'> Total Time: 3hrs </h4>
+      <div className='project-bar'>
+        <p className='project-bar-name'> project name </p>
+        <div className='tui-bar-container'>
+          <TuiBar progress={50} total={100} />
+        </div>
+        <p className='project-bar-percentage'> 50% </p>
+      </div>
     </TuiWindow>
   </div>
 
